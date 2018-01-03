@@ -1,4 +1,6 @@
-#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+# !/usr/bin/python
 import Queue
 import sys
 import threading

@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from multiprocessing import Pool
 import os, time, random
 
@@ -15,7 +17,7 @@ if __name__ == '__main__':
     p = Pool(4)
     for i in range(5):
         p.apply_async(long_time_task, args=(i,))
-    print('Waiting for all subprocesses done...')
+    print('Waiting for all Children done...')
     p.close()
     p.join()
-    print('All subprocesses done.')
+    print('All Children done.')
