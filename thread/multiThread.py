@@ -41,7 +41,7 @@ class ThreadPoolManager(object):
 
 
 def process_run(cmd):
-    print cmd
+    print (cmd)
 
 
 def start_process(type, code):
@@ -66,4 +66,4 @@ if __name__ == "__main__":
     if len(sys.argv) == 3:
         start_process(sys.argv[1], sys.argv[2])
     else:
-        print "error argv..."
+        print ("error argv...")
