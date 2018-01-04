@@ -7,7 +7,7 @@ def now():
     return datetime.datetime.now()
 
 
-def format(_d, _format):
+def dateTstr(_d, _format):
     return _d.strftime(_format)
 
 
@@ -16,7 +16,7 @@ def strTdate(_str, _format):
 
 
 now = now()
-print(now, format(now, '%Y-%m-%d %H:%M:%S'))
+print(now, dateTstr(now, '%Y-%m-%d %H:%M:%S'))
 
 d = strTdate('2015-04-07 19:11:21', '%Y-%m-%d %H:%M:%S')
 print(d)
