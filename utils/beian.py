@@ -18,15 +18,14 @@ class Beian(object):
 
     def doGet(self, url):
         rep = request.urlopen(url)
-        page = rep.read()
-        page = page.decode("utf-8")
+        page = rep.read().decode("utf-8")
         return json.loads(page)
 
     def icp_beian(self):
         page_dict = self.doGet(self.icp_api + self.domain)
         if page_dict.get('status', '') == 304:
             return {"msg": "请求太频繁。"}
-        elif page_dict["type"] == 300:
+        elif page_dict.get('type', '') == 300:
             return {"msg": "没有查询到备案信息，或者是新备案的域名。"}
         else:
             data = {}
