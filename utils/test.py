@@ -1,12 +1,12 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-import urllib.request
+from urllib import request
 
 # 请求百度网页
-resu = urllib.request.urlopen('http://www.baidu.com', data=None, timeout=10)
-print(resu.read(300))
+resu = request.urlopen('http://www.baidu.com', data=None, timeout=10)
+print(resu.read())
 
 # 指定编码请求
-f = urllib.request.urlopen('http://www.baidu.com')
-print(f.read(100).decode('utf-8'))
+f = request.urlopen('https://www.chuangcache.com')
+print(f.read().decode('utf-8'))
