@@ -31,6 +31,6 @@ d2 = strTdate('2015-03-02 17:41:20', '%Y-%m-%d %H:%M:%S')
 delta = d1 - d2
 print(delta.days)
 
-delta = datetime.timedelta(days=3)
+delta = datetime.timedelta(days=7)
 n_days = now + delta
 print(n_days.strftime('%Y-%m-%d %H:%M:%S'))
